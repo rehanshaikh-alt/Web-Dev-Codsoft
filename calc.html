@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="mn">
+      <header>
+        <div class="head">
+          <input type="checkbox" id="toggle" />
+
+          <label for="toggle" class="menu-btn">☰</label>
+          <label for="toggle" class="overlay"></label>
+
+          <!-- * Sidebar -->
+          <div class="sidebar">
+            <a>Converter</a>
+            <a>Discount System</a>
+          </div>
+          <h1>Calculator</h1>
+          <button class="theme-btn">Change theme</button>
+        </div>
+      </header>
+      <main>
+        <div class="container">
+          <div class="screen"></div>
+          <div class="btn-container">
+            <!-- row1 -->
+            <button data-action="Clear">C</button>
+            <button data-action="Delete">Del</button>
+            <button data-action="Square">x<sup>2</sup></button>
+            <button data-action="operator" data-op="+">+</button>
+
+            <!-- row2 -->
+            <button data-value="7">7</button>
+            <button data-value="8">8</button>
+            <button data-value="9">9</button>
+            <button data-action="operator" data-op="-">-</button>
+
+            <!-- row3 -->
+            <button data-value="4">4</button>
+            <button data-value="5">5</button>
+            <button data-value="6">6</button>
+            <button data-action="operator" data-op="*">*</button>
+
+            <!-- row4 -->
+            <button data-value="1">1</button>
+            <button data-value="2">2</button>
+            <button data-value="3">3</button>
+            <button data-action="operator" data-op="/">/</button>
+
+            <!-- row5 -->
+            <button data-value="00">00</button>
+            <button data-value="0">0</button>
+            <button data-value=".">.</button>
+            <button data-action="equals">=</button>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="contain-footer">
+          © 2025 Calculator | All rights reserved
+        </div>
+      </footer>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>

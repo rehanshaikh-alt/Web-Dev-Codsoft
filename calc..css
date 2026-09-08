@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* First Theme */
+/* header section */
+.head {
+  height: 50px;
+  background-color: #afcbff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.head > h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3.5rem;
+  color: #0e1c36;
+}
+
+/* sidebar section */
+#toggle {
+  display: none;
+}
+
+.menu-btn {
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 10px;
+  display: inline-block;
+}
+
+.menu-btn:hover {
+  border: 2.7px solid #242423;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 3;
+}
+
+#toggle:checked ~ .overlay {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 250px;
+  background: #afcbff;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+  transition: left 0.3s ease;
+  z-index: 3;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.sidebar a:hover {
+  cursor: pointer;
+  color: lightgray;
+  transition: 0.2s;
+}
+
+#toggle:checked ~ .sidebar {
+  left: 0;
+}
+
+.theme-btn {
+  font-size: 0.85rem;
+  padding: 12px;
+  border: none;
+  background: #0e1c36;
+  color: #ffede1;
+  border-radius: 18.7px;
+}
+
+.theme-btn:hover {
+  background-color: black;
+  box-shadow: 4px 5px 9px rgba(0, 0, 0, 0.5);
+}
+
+.mn {
+  background: white;
+}
+
+/* calculator section */
+.container {
+  border-radius: 35px;
+  background-color: #0e1c36;
+  width: 40%;
+  margin: 40px auto;
+  height: 800px;
+  padding: 15px;
+}
+
+.screen {
+  border-radius: 25px;
+  color: #0e1c36;
+  width: 93%;
+  margin: 20px auto;
+  height: 250px;
+  background-color: #f9fbf2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20px;
+  font-size: 48px;
+  font-weight: 600;
+  box-sizing: border-box;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.btn-container {
+  border-radius: 36px;
+  width: 93%;
+  margin: 20px auto;
+  height: 500px;
+  background-color: #d7f9ff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.btn-container button {
+  height: 70px;
+  font-size: 20px;
+  border-radius: 12px;
+  border: none;
+  background-color: #e6faff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease;
+}
+
+.btn-container button:active {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+.contain-footer {
+  color: black;
+  height: 60px;
+  width: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #afcbff;
+  font-weight: 700;
+}
+
+/* Second Theme */
+body.neon-ash .head {
+  height: 50px;
+  background-color: #d64933;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+body.neon-ash .head > h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3.5rem;
+  color: #eee5e9;
+}
+
+body.neon-ash .sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 250px;
+  background: #d64933;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+  transition: left 0.3s ease;
+  z-index: 3;
+}
+
+body.neon-ash .sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+body.neon-ash .sidebar a:hover {
+  cursor: pointer;
+  color: lightgray;
+  transition: 0.2s;
+}
+
+body.neon-ash .theme-btn {
+  font-size: 0.85rem;
+  padding: 12px;
+  border: none;
+  background: #eee5e9;
+  color: #000000;
+  border-radius: 18.7px;
+}
+
+body.neon-ash .theme-btn:hover {
+  background-color: #7c7c7c;
+  box-shadow: 4px 5px 9px rgba(0, 0, 0, 0.5);
+}
+
+body.neon-ash .mn {
+  background: #30b9ca;
+}
+
+body.neon-ash .container {
+  border-radius: 35px;
+  background-color: #7c7c7c;
+  width: 40%;
+  margin: 40px auto;
+  height: 800px;
+  padding: 15px;
+}
+
+body.neon-ash .screen {
+  border-radius: 25px;
+  color: #000000;
+  width: 93%;
+  margin: 20px auto;
+  height: 250px;
+  background-color: #eee5e9;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20px;
+  font-size: 48px;
+  font-weight: 600;
+  box-sizing: border-box;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+body.neon-ash .btn-container {
+  border-radius: 36px;
+  width: 93%;
+  margin: 20px auto;
+  height: 500px;
+  background-color: #eee5e9;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+body.neon-ash .btn-container button {
+  height: 70px;
+  font-size: 20px;
+  border-radius: 12px;
+  border: none;
+  background-color: #30b9ca !important;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease;
+}
+
+body.neon-ash .btn-container button:active {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+body.neon-ash .contain-footer {
+  color: #eee5e9;
+  height: 60px;
+  width: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d64933;
+  font-weight: 700;
+}
+
+/* Theme 3 */
